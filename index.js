@@ -141,3 +141,17 @@ function increase(flatten){
 var dateValuemaxValue = increase(flatten);
 console.log("Greatest Increase in Profit: " + dateValuemaxValue);
 
+function decrease(flatten){
+  var minValue = Number.MAX_VALUE;
+  var dateValue = String.minValue;
+    for(let i=0;i<flatten.length;i++){
+      if(flatten[i]<minValue){
+      minValue = flatten[i];
+      dateValue = flatten[i-1];
+        }
+  }
+  return dateValue+" "+ "($" + minValue +")";
+}
+
+var dateValueminValue = decrease(flatten);
+console.log("Greatest decrease in Profit: " + dateValueminValue);
