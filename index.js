@@ -110,3 +110,18 @@ const countNumbers = (flatten = []) => {
 }
 console.log( "Total P/L: $" + countNumbers(flatten));
 
+
+const substractNumbers = (flatten = []) => {
+  let sum = 0;
+  for(let i = 0; i < flatten.length; i++){
+     const el = flatten[i+3] - flatten[i+1]; 
+     if(+el){
+        sum += +el;
+     };
+  };
+  return sum;
+}
+let twodigitssubstractNumbers =  (substractNumbers (flatten)/86).toFixed (2);
+console.log( "Average P/L: $" + twodigitssubstractNumbers);
+
+
