@@ -94,3 +94,19 @@ let totalmonths = finances.length;
 console.log("Total months: " + totalmonths);
 
 
+var flatten = finances.reduce(function(a, b) {
+    return a.concat(b);
+});
+
+const countNumbers = (flatten = []) => {
+  let sum = 0;
+  for(let i = 0; i < flatten.length; i++){
+     const el = flatten[i]; 
+     if(+el){
+        sum += +el;
+     };
+  };
+  return sum;
+}
+console.log( "Total P/L: $" + countNumbers(flatten));
+
