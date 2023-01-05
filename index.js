@@ -125,3 +125,19 @@ let twodigitssubstractNumbers =  (substractNumbers (flatten)/86).toFixed (2);
 console.log( "Average P/L: $" + twodigitssubstractNumbers);
 
 
+
+function increase(flatten){
+  var maxValue = Number.MIN_VALUE;
+  var dateValue = String.maxValue;
+    for(let i=0;i<flatten.length;i++){
+      if(flatten[i]>maxValue){
+      maxValue = flatten[i];
+      dateValue = flatten[i-1];
+        }
+  }
+  return dateValue+" "+ "($" + maxValue +")";
+}
+
+var dateValuemaxValue = increase(flatten);
+console.log("Greatest Increase in Profit: " + dateValuemaxValue);
+
