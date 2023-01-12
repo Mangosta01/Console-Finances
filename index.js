@@ -98,6 +98,7 @@ var flatten = finances.reduce(function(a, b) {
     return a.concat(b);
 });
 
+
 const countNumbers = (flatten = []) => {
   let sum = 0;
   for(let i = 0; i < flatten.length; i++){
@@ -121,37 +122,54 @@ const substractNumbers = (flatten = []) => {
   };
   return sum;
 }
-let twodigitssubstractNumbers =  (substractNumbers (flatten)/86).toFixed (2);
+let twodigitssubstractNumbers =  (substractNumbers (flatten)/85).toFixed (2);
 console.log( "Average P/L: $" + twodigitssubstractNumbers);
 
 
 
-function increase(flatten){
-  var maxValue = Number.MIN_VALUE;
-  var dateValue = String.maxValue;
-    for(let i=0;i<flatten.length;i++){
-      if(flatten[i]>maxValue){
-      maxValue = flatten[i];
-      dateValue = flatten[i-1];
-        }
-  }
-  return dateValue+" "+ "($" + maxValue +")";
+
+function max_difference(finances) {
+  var result = - 1;
+  var max;
+  var dateValue;
+for (var i = 1; i < finances.length; i++)
+for (var j = 1; j<finances[i].length;j++)
+  {
+max = Math.max(finances[i][1] - finances[i-1][1]);
+result = Math.max (result,max);
+if (max===result){
+  dateValue = finances[i][0]}
+    }
+return dateValue+" "+ "($" + result +")" ;
+
 }
 
-var dateValuemaxValue = increase(flatten);
-console.log("Greatest Increase in Profit: " + dateValuemaxValue);
+console.log ("Biggest Increase in Profit: " + max_difference(finances));
 
-function decrease(flatten){
-  var minValue = Number.MAX_VALUE;
-  var dateValue = String.minValue;
-    for(let i=0;i<flatten.length;i++){
-      if(flatten[i]<minValue){
-      minValue = flatten[i];
-      dateValue = flatten[i-1];
-        }
-  }
-  return dateValue+" "+ "($" + minValue +")";
+
+
+function min_difference(finances) {
+  var result = - 1;
+  var min;
+  var dateValue;
+for (var i = 1; i < finances.length; i++)
+for (var j = 1; j<finances[i].length;j++)
+  {
+min = Math.min(finances[i][1] - finances[i-1][1]);
+result = Math.min (result,min);
+if (min===result){
+  dateValue = finances[i][0]}
+    }
+return dateValue+" "+ "($" + result +")" ;
+
 }
 
-var dateValueminValue = decrease(flatten);
-console.log("Greatest decrease in Profit: " + dateValueminValue);
+console.log ("Biggest Decrease in Profit: " + min_difference(finances));
+
+
+
+
+
+
+
+
