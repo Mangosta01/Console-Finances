@@ -87,18 +87,19 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
-
+/* JavaScript code to calculate total number of months */
 console.log("Financial Analysis");
 console.log("------------------------------");
 let totalmonths = finances.length;
 console.log("Total months: " + totalmonths);
 
+/* JavaScript code to Concatenate finances array */
 
 var flatten = finances.reduce(function(a, b) {
     return a.concat(b);
 });
 
-
+/* JavaScript code to calculate Total P/L */
 const countNumbers = (flatten = []) => {
   let sum = 0;
   for(let i = 0; i < flatten.length; i++){
@@ -111,6 +112,7 @@ const countNumbers = (flatten = []) => {
 }
 console.log( "Total P/L: $" + countNumbers(flatten));
 
+/* JavasScript code to calculate Average changes in P/L */
 
 const substractNumbers = (flatten = []) => {
   let sum = 0;
@@ -126,7 +128,7 @@ let twodigitssubstractNumbers =  (substractNumbers (flatten)/85).toFixed (2);
 console.log( "Average P/L: $" + twodigitssubstractNumbers);
 
 
-
+/* JavaScript code to calculate the greatest increase in profits (date and amount) over the entire period.*/
 
 function max_difference(finances) {
   var result = - 1;
@@ -144,9 +146,9 @@ return dateValue+" "+ "($" + result +")" ;
 
 }
 
-console.log ("Biggest Increase in Profit: " + max_difference(finances));
+console.log ("Greatest Increase in Profits: " + max_difference(finances));
 
-
+/* JavaScript code to calculate the greatest decrease in profits (date and amount) over the entire period.*/
 
 function min_difference(finances) {
   var result = - 1;
@@ -164,7 +166,7 @@ return dateValue+" "+ "($" + result +")" ;
 
 }
 
-console.log ("Biggest Decrease in Profit: " + min_difference(finances));
+console.log ("Greatest Decrease in Profits: " + min_difference(finances));
 
 
 
